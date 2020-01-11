@@ -1,0 +1,50 @@
+<MyGrid>:
+
+    title: title
+    year: year
+    director: director
+    cast: cast
+
+    GridLayout:
+        cols: 1
+        size: root.width - 100, root.height - 100
+        pos: 50, 50
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "Title: "
+
+            TextInput:
+                id: title
+                multiline: False
+
+            Label:
+                text: "Year: "
+
+            TextInput:
+                id: year
+                multiline: False
+
+            Label:
+                text: "Director: "
+
+            TextInput:
+                id: director
+                multiline: False
+
+            Label:
+                text: "Cast: "
+
+            TextInput:
+                id: cast
+                multiline: True
+
+        Button:
+            text: "Submit"
+            on_press: root.pressed()
+
+        Label:
+            text: "Rating"
+
