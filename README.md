@@ -17,14 +17,12 @@ pip install movierecommender
 ```python
 import movierecommender
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+(...)
 ```
 
 ## Contributors
 
-Weronika Olejniczak at 
+Weronika Olejniczak at [weronikaolejniczak](https://github.com/weronikaolejniczak)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
