@@ -1,3 +1,6 @@
+import re
+
+
 class Movie:
 
     # Class Attribute
@@ -10,3 +13,14 @@ class Movie:
         self.cast = cast
         self.rating = rating
 
+    def parse_year(self):
+        pass
+
+    def parse_director(self):
+        pass
+
+    def parse_cast(self):
+        pass
+
+    def parse_rating(self):
+        pass

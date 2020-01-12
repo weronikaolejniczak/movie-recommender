@@ -4,11 +4,12 @@
     year: year
     director: director
     cast: cast
+    rating: rating
 
     GridLayout:
         cols: 1
-        size: root.width - 100, root.height - 100
-        pos: 50, 50
+        size: root.width - 20, root.height - 20
+        pos: 10, 10
 
         GridLayout:
             cols: 2
@@ -35,7 +36,7 @@
                 multiline: False
 
             Label:
-                text: "Cast: "
+                text: "Main cast: "
 
             TextInput:
                 id: cast
@@ -43,8 +44,11 @@
 
         Button:
             text: "Submit"
+            size: root.width - 20, 75
+            size_hint: None, None
             on_press: root.pressed()
 
         Label:
+            id: rating
             text: "Rating"
-
+            font_size: 48

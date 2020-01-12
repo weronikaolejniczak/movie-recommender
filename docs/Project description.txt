@@ -1,5 +1,7 @@
 Movie recommender
-Write a program that predicts a rating for a movie (1-10, IMDB-like) based on data like: director's name, production year, main cast etc. Train your algorithm on a part film database of your choice and test it on a different data.
+Write a program that predicts a rating for a movie (1-10, IMDB-like) based on data like: director's name,
+production year, main cast etc. Train your algorithm on a part film database of your choice and test it on
+a different data.
 
 Basic number of points: 140
 

@@ -1,1 +1,5 @@
+unidecode
+beautifulsoup4
+requests
+pandas
 kivy
