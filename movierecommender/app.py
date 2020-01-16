@@ -1,10 +1,7 @@
-# TODO:
-#  integrate neural networks
-
 from kivy.app import App
-from kivy.uix.widget import Widget
-from kivy.properties import ObjectProperty
 from kivy.core.window import Window
+from kivy.properties import ObjectProperty
+from kivy.uix.widget import Widget
 
 import recommender as mvrec
 
@@ -29,11 +26,14 @@ class MyGrid(Widget):
 
     def submit(self):
         if self.title.text != "" and self.year.text != "" and self.director.text != "" and self.cast.text != "":
-            self.show_info()
+            movie = mvrec.assign_data(self.title.text, self.year.text, self.director.text, cast=self.cast.text.split("\n"))
 
-            movie = mvrec.assign_data(self.title.text, self.year.text, self.director.text, self.cast.text)
+            if movie.check_data() == 0:
+                self.show_info()
+                mvrec.summarize(movie.title, movie.year, movie.director, movie.cast, movie.rating)
+                self.show_rating(movie.rating)
+                self.clear()
 
-            self.show_rating(movie.rating)
         else:
             print("Please put in all essential information!\n")
 
@@ -42,13 +42,12 @@ class MyGrid(Widget):
             "Title: ", self.title.text,
             "\nYear: ", self.year.text,
             "\nDirector: ", self.director.text,
-            "\nMain cast: ", self.cast.text,
+            "\nMain cast: ", self.cast.text.replace("\n", ", "),
             "\n"
         )
 
     def pressed(self):
         self.submit()
-        self.clear()
 
 
 class MyApp(App):
