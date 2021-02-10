@@ -8,10 +8,6 @@ tested it on a different data.
 
 Fork and download the repository.
 
-## Usage
-
-(...)
-
 ## Contributors
 
 Weronika Olejniczak at [weronikaolejniczak](https://github.com/weronikaolejniczak)
